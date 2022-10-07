@@ -11,3 +11,8 @@ if __name__ == '__main__':
     print(any([i.isdigit() for i in s]))
     print(any([i.islower() for i in s]))
     print(any([i.isupper() for i in s]))
+#using some funtion god sake i dont understand completely eeeeeeee!
+if __name__ == '__main__':
+    s = input()
+    for func in ['alnum','alpha','digit','lower','upper']:
+      print(any([eval(f'char.is{func}()') for char in s]))
