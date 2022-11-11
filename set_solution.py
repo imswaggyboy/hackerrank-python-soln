@@ -10,6 +10,9 @@ def average(array):
   return round(avg,3)
 ________________________________________________________________________________________________________________________________________________________________          
 Q2.symmetric_difference()
+
+solu1 :
+  
 # i dont know why i am taking the size of each set but i have to take it
 size_of_a = int(input())
 #lets split the input and use map() to convert it into integer and at outside i put set to get the 'a' in set
@@ -26,5 +29,17 @@ c.update(b.difference(a))
 sort_c = sorted(c)
 # iterate it through c and print the i 
 for i in sort_c:
+  print(i)
+Solu2:
+  
+size_of_a = int(input())
+a = set(map(int,input().split()))
+size_of_b = int(input())
+b = set(map(int,input().split()))
+# We can also find symmetric difference from two sets using ‘^’ operator in Python.
+c = a^b
+print(c)
+# now iterate thought c and print i
+for i in c:
   print(i)
 ________________________________________________________________________________________________________________________________________________________________          
