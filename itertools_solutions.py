@@ -58,4 +58,53 @@ group_by = [(len(list(value)),key) for key,value in group]
 # okay at the last iterate through the list and the element using index  and used the end=' ' so that new value does not print in next line
 for i in range(len(group_by)):
   print(group_by[i],end = ' ')
+ 
+_____________________________________________________________________________________________________________________
+Q6. iterables and iterators 
 
+# In this problem i didnt utilized the n i.e length of the list 
+# written solution in two format:
+# 1) where i used only combinations from itertools and normal for loop to get the count of a in the tuple
+# 2) here i used combinations from itertools and list comprehension where i put the tuple which contains 'a' and returned its len
+
+Solution 1:
+          
+from itertools import combinations
+n = int(input())
+N = input().lower()
+k = int(input())
+split_N = N.split()
+combo = list(combinations(split_N,k))
+len_combo = len(combo)
+count = 0
+for i in range(len_combo):
+    if 'a' in combo[i]:
+        count = count+1
+#print(len_combo)
+#print(count)
+probability = round(count/len_combo,3)
+print(probability)
+
+Solution 2:
+          
+from itertools import combinations
+# take input from user
+n = int(input())
+# take the string from user and convert it into lower() case i dont know it is necessary or not i just did it
+N = input().lower()
+# take the k value to make the combinations or to divide the string to make the combinations
+k = int(input())
+# splited the input(string)
+split_N = N.split()
+# used the combinations library or module or function to make combinations , here i used the k to make combinations
+combo = list(combinations(split_N,k))
+#lets get the length of the combinations we just made so that we find the probability of the 'a'
+len_combo = len(combo)
+# here i used the list comprehension which really comes handy to avoid multiple code so here i made a list of tuples that contains the 'a' in the each tuple 
+# taken its length len() so we get the numerator
+count = len([combo[i] for i in range(len_combo) if 'a' in combo[i]])
+# finally lets divide it and get the probability and i used the round function to keep the precision upto 3
+probability = round(count/len_combo,3)
+print(probability)
+
+_________________________________________________________________________________________________________________________
