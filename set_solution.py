@@ -43,3 +43,15 @@ print(c)
 for i in c:
   print(i)
 ________________________________________________________________________________________________________________________________________________________________          
+Q3. set.add()
+
+#lets that the size of set we wanted 
+N = int(input())
+# creating empty set note we cant use only {} because python takes it as a dictionary so always use set({})
+s = set({})
+# lets use while loops so that we can add the element to the set .here n is greater than zero  we will add and once we add element we decrement it by 1
+while N >0:
+    s.add(input())
+    N = N-1
+#well now just print the lenght of the s that what they wanted
+print(len(s))
