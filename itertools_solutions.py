@@ -64,7 +64,7 @@ Q6. iterables and iterators
 
 # In this problem i didnt utilized the n i.e length of the list 
 # written solution in two format:
-# 1) where i used only combinations from itertools and normal for loop to get the count of a in the tuple
+# 1) where i used only combinations from itertools and normal for loop to get the count of 'a' in the tuple
 # 2) here i used combinations from itertools and list comprehension where i put the tuple which contains 'a' and returned its len
 
 Solution 1:
